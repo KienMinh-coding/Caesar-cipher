@@ -1,5 +1,3 @@
-require 'pry'
-
 def caesar_cipher(string, number)
   origin_array = string.split("")
 
@@ -15,7 +13,6 @@ def encrypt(character, number)
   symbol_array = Array('!'..'?') - Array("0".."9") 
 
   if num_array.include? character
-#    (((character.to_i) + number) % 10).to_s
     shift_factor(num_array, character, number)
   elsif alt_array.include? character
     shift_factor(alt_array, character, number)
