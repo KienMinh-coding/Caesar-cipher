@@ -1,12 +1,26 @@
 def bubble_sort(arr)
-  position = 0
-
-  arr.each do |value|
-    left = value
-    left_idx = arr.find_index(left)
-    light_idx = left_idx + 1
-    right = arr[arr.find_index(value) + 1]
-    if left > right
-
-  end
+    if check(arr) == true
+      return arr
+    else
+      swapping(arr)
+    end
 end
+
+def swapping(arr)
+  for i in 0..(arr.size - 2)
+    if arr[i] > arr[i+1]
+      arr[i], arr[i+1] = arr[i+1], arr[i]
+      arr
+    else
+      arr
+    end
+  end
+  bubble_sort(arr)
+end
+
+def check(arr)
+  result
+  arr.each
+end
+
+bubble_sort([4,3,78,2,0,2])
